@@ -1,9 +1,9 @@
 # Pmanchu_FE
 
-- React
+- ⚙️ React
 
-- styled-components
+- 💅 styled-components
   
-- Router
+- 🖱️ Router
 
-- Axios
+- 🛜 Axios
