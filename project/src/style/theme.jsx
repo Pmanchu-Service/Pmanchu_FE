@@ -2,13 +2,14 @@ export const theme = {
   color: {
     black: "#2F2F2F",
     white: "#FFFFFF",
+    red: "F9291C",
 
     main: {
-      1: "#40726F",
-      2: "#588D80",
+      1: "#DCEC9D",
+      2: "#ABD794",
       3: "#74A993",
-      4: "#50C314",
-      5: "#39A600",
+      4: "#588D80",
+      5: "#40726F",
     },
     gray: {
       1: "#EBEBEB",
@@ -19,10 +20,6 @@ export const theme = {
       6: "#9E9E9E",
       7: "#959595",
       8: "#8B8B8B",
-    },
-
-    error: {
-      1: "F9291C",
     },
   },
 };
