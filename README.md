@@ -3,11 +3,9 @@
 - ⚙️ React
 
 - 💅 styled-components
-  
 - 🖱️ Router
 
 - 🛜 Axios
-
 
 # commit message
 
@@ -24,3 +22,4 @@
 - test : 테스트 코드 추가
 
 - style : 네이밍 수정, 코드 포맷팅 수정
+
