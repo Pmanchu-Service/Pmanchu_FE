@@ -1,4 +1,5 @@
-import { Router } from "./Router";
+import { Router } from './Router';
+import '../src/App.css';
 
 export const App = () => {
   return <Router />;
