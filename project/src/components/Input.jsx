@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../style/theme";
-import asterisk from "../images/mingcute_asterisk-fill.png";
+import star from "../assets/mingcute_asterisk-fill.svg";
 
 export const Input = (props) => {
   return (
@@ -9,7 +9,6 @@ export const Input = (props) => {
       <InputContainer>
         <TitleContainer>
           <Text>{props.text}</Text>
-          <StyledImg src={asterisk} />
         </TitleContainer>
         <StyledInput></StyledInput>
       </InputContainer>
@@ -21,10 +20,7 @@ const TitleContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   float: left;
-`;
-const StyledImg = styled.img`
-  width: 12px;
-  height: 12px;
+  background: url(${star});
 `;
 const Text = styled.p`
   font-family: "regular";
