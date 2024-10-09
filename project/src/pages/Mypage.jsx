@@ -7,15 +7,17 @@ import { Explanation } from '../components/mypage/Explanation';
 import { Link } from '../components/mypage/Link';
 import { Project } from '../components/mypage/Project';
 
-export const Mypage_me = () => {
+export const Mypage = () => {
   return (
     <>
       <MypageContainer>
         <ProfileContainer>
           <EditContainer>
             <EditBtn>
-              수정
-              <img src={edit} alt="수정로고" />
+              {true ? '수정' : '프로젝트 제의'}{' '}
+              {/*true일 땐 본인이 마이페이지 볼 때, false일 땐 타인이 다른 사람의 마이페이지를 볼 때*/}
+              {true && <img src={edit} alt="수정로고" />}
+              {/*true일 땐 본인이 마이페이지 볼 때, false일 땐 타인이 다른 사람의 마이페이지를 볼 때*/}
             </EditBtn>
           </EditContainer>
           <ProfileAll>
@@ -86,23 +88,26 @@ export const Mypage_me = () => {
                 />
               </ProjectContents>
             </ProjectSubContainer>
-            <ProjectSubContainer>
-              <Introduction title={'지원한 프로젝트'} />
-              <ProjectContents>
-                <Project
-                  title={'프만추'}
-                  content={
-                    '안녕하세요~ 떵!개 입니다~ 오늘의 먹방은? 프로젝트에 만두추가! 프로젝트에 만두추가! 프로젝트에 만두추가! 프로젝트에 만두추가! 프로젝트에 만두추가! 프로젝트에 만두추가! 맛있게먹습니다~~~~~~~~ '
-                  }
-                />
-                <Project
-                  title={'프만추'}
-                  content={
-                    '안녕하세요~ 떵!개 입니다~ 오늘의 먹방은? 프로젝트에 만두추가! 프로젝트에 만두추가! 프로젝트에 만두추가! 프로젝트에 만두추가! 프로젝트에 만두추가! 프로젝트에 만두추가! 맛있게먹습니다~~~~~~~~ '
-                  }
-                />
-              </ProjectContents>
-            </ProjectSubContainer>
+            {/*true일 땐 본인이 마이페이지 볼 때, false일 땐 타인이 다른 사람의 마이페이지를 볼 때*/}
+            {true && (
+              <ProjectSubContainer>
+                <Introduction title={'지원한 프로젝트'} />
+                <ProjectContents>
+                  <Project
+                    title={'프만추'}
+                    content={
+                      '안녕하세요~ 떵!개 입니다~ 오늘의 먹방은? 프로젝트에 만두추가! 프로젝트에 만두추가! 프로젝트에 만두추가! 프로젝트에 만두추가! 프로젝트에 만두추가! 프로젝트에 만두추가! 맛있게먹습니다~~~~~~~~ '
+                    }
+                  />
+                  <Project
+                    title={'프만추'}
+                    content={
+                      '안녕하세요~ 떵!개 입니다~ 오늘의 먹방은? 프로젝트에 만두추가! 프로젝트에 만두추가! 프로젝트에 만두추가! 프로젝트에 만두추가! 프로젝트에 만두추가! 프로젝트에 만두추가! 맛있게먹습니다~~~~~~~~ '
+                    }
+                  />
+                </ProjectContents>
+              </ProjectSubContainer>
+            )}
           </ProjectContainer>
         </DescriptionContainer>
       </MypageContainer>
@@ -247,8 +252,9 @@ const EditBtn = styled.button`
   gap: 8px;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 40px;
+  /* width: 80px;
+  height: 40px; */
+  padding: 10.5px 12px;
   background-color: ${theme.color.main[2]};
   border: none;
   font-weight: 600;
