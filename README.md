@@ -9,17 +9,17 @@
 
 # commit message
 
-- feat : 기능 추가
+- FEAT : 기능 추가
 
-- fix : 버그 수정
+- FIX : 버그 수정
 
-- refactor : 리팩토링
+- REFACTOR : 리팩토링
 
-- perf : 성능 개선
+- PERF : 성능 개선
 
-- docs : 문서화
+- DOCS : 문서화
 
-- test : 테스트 코드 추가
+- TEST : 테스트 코드 추가
 
-- style : 네이밍 수정, 코드 포맷팅 수정
+- STYLE : 네이밍 수정, 코드 포맷팅 수정
 
