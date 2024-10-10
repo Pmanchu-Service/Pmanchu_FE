@@ -47,7 +47,7 @@ export const Header = () => {
 
 const LogoutContainer = styled.div`
   box-sizing: border-box;
-  width: 1920px;
+  width: 100vw;
   height: 64px;
   border-bottom: 1px solid #CCCCCC;
   display: flex;
@@ -58,7 +58,7 @@ const LogoutContainer = styled.div`
 
 const LoginContainer = styled.div`
   box-sizing: border-box;
-  width: 1920px;
+  width: 100vw;
   height: 64px;
   border-bottom: 1px solid #CCCCCC;
   padding: 0 36px 0 32px;
