@@ -1,12 +1,12 @@
 import { styled } from 'styled-components';
 import { theme } from '../style/theme';
-import edit from '../assets/mypageImg/edit.svg';
 import profile from '../assets/mypageImg/profile.svg';
 import { Introduction } from '../components/mypage/Introduction';
 import { Explanation } from '../components/mypage/Explanation';
 import { Link } from '../components/mypage/Link';
 import { Project } from '../components/mypage/Project';
 import { Header } from '../components/Header';
+import { Button } from '../components/button/Button';
 
 export const Mypage = () => {
   return (
@@ -16,12 +16,7 @@ export const Mypage = () => {
         <MypageContents>
           <ProfileContainer>
             <EditContainer>
-              <EditBtn>
-                {true ? '수정' : '프로젝트 제의'}{' '}
-                {/*true일 땐 본인이 마이페이지 볼 때, false일 땐 타인이 다른 사람의 마이페이지를 볼 때*/}
-                {true && <img src={edit} alt="수정로고" />}
-                {/*true일 땐 본인이 마이페이지 볼 때, false일 땐 타인이 다른 사람의 마이페이지를 볼 때*/}
-              </EditBtn>
+              <Button value={true ? '수정' : '프로젝트 제의'} />
             </EditContainer>
             <ProfileAll>
               <img src={profile} alt="프로필 이미지" />
@@ -212,6 +207,7 @@ const MypageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  width: 100vw;
 `;
 
 const ProfileContainer = styled.div`
