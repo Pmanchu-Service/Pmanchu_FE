@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../style/theme";
-import star from "../assets/mingcute_asterisk-fill.svg";
+import { theme } from "../../style/theme";
+import star from "../../assets/signupImg/mingcute_asterisk-fill.svg";
 
-export const Input = ({ height = "100%", ...props }) => {
+export const Input = ({ width = "100%", height = "100%", ...props }) => {
   return (
     <>
       <InputContainer>
@@ -11,7 +11,11 @@ export const Input = ({ height = "100%", ...props }) => {
           <Text>{props.text}</Text>
           <StyledImg src={star} />
         </TitleContainer>
-        <StyledInput placeholder={props.placeholder} height={height} />
+        <StyledInput
+          placeholder={props.placeholder}
+          height={height}
+          width={width}
+        />
       </InputContainer>
     </>
   );
@@ -22,8 +26,6 @@ const TitleContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 87px;
-  height: 28px;
   margin-bottom: 8px;
 `;
 const Text = styled.p`
@@ -35,10 +37,12 @@ const InputContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  margin-bottom: 36px;
 `;
 const StyledInput = styled.input`
   width: 690px;
   height: ${({ height }) => height};
+  width: ${({ width }) => width};
   border-radius: 8px;
   background-color: ${theme.color.gray[1]};
   border: 1px solid ${theme.color.gray[2]};
