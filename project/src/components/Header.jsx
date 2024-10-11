@@ -4,8 +4,8 @@ import { ReactComponent as Icon } from "../assets/Pmanchu_Logo.svg"
 import { useState } from "react"
 import { CreateProjectBtn } from "./button/CreateProjectBtn"
 import { HeaderTextBtn } from "./button/HeaderTextBtn"
-import { ReactComponent as Bell } from "../assets/bell.svg"
-import { ReactComponent as Belled } from "../assets/belled.svg"
+import { ReactComponent as Bell } from "../assets/mainpage/bell.svg"
+import { ReactComponent as Belled } from "../assets/mainpage/belled.svg"
 import { SearchBar } from "./search/SearchBar"
 
 export const Header = () => {
