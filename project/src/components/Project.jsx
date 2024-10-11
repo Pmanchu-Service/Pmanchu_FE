@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { ReactComponent as Like } from "../assets/likeBtn.svg"
-import { ReactComponent as Liked } from "../assets/likedBtn.svg"
+import { ReactComponent as Like } from "../assets/mainpage/likeBtn.svg"
+import { ReactComponent as Liked } from "../assets/mainpage/likedBtn.svg"
 import { useState } from "react"
 
 export const Project = () => {
