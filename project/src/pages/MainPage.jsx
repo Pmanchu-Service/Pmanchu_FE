@@ -34,7 +34,7 @@ export const MainPage = () => {
 };
 
 const Container = styled.div`
-  width: 1140px;
+  width: 1100px;
   display: flex;
   flex-direction: column;
   gap: 56px;
@@ -94,7 +94,6 @@ box-sizing: border-box;
 
 const Main = styled.div`
 height: calc(100vh - 64px);
-width: 100vw;
 padding: 84px 390px 104px;
 box-sizing: border-box;
 `

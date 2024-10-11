@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const TagComponent = ({ text }) => {
+export const TagComponent = ( ) => {
   return (
     <Tag>
-      {text}
+      test
     </Tag>
   );
 };
 
-const Tag = styled.div`
+const Tag = styled.button`
   padding: 8px 16px;
   background-color: #ffffff;
   border-radius: 5px;
