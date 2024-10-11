@@ -186,6 +186,7 @@ const Apply = styled.button`
   float: right;
   font-size: 20px;
   font-weight: 600;
+<<<<<<< Updated upstream
 `;
 
 const Popup = styled.div`
@@ -223,3 +224,6 @@ const PopupContent = styled.div`
     cursor: pointer;
   }
 `;
+=======
+`;D
+>>>>>>> Stashed changes
