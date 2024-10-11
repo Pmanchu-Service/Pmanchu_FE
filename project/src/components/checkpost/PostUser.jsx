@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components'; 
+import { TagComponent } from '../checkpost/TagComponent';
 
 export const PostUser = () => {
+  const [tags, setTags] = useState([]);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [newTagText, setNewTagText] = useState('');
+
+  const handleAddTagClick = () => {
+    setIsPopupOpen(true);
+  };
+
+  const handleAddTag = () => {
+    if (newTagText) {
+      setTags([...tags, newTagText]);
+      setNewTagText('');
+      setIsPopupOpen(false);
+    }
+  };
+
   return (
     <>
       <Container>
@@ -14,6 +31,7 @@ export const PostUser = () => {
         </ProjectTitle>
         <hr />
         <Buttons>
+          <Button onClick={handleAddTagClick}>태그 추가</Button>
           <Button>모집중...</Button>
           <Button>계획서 보기</Button>
           <Button>보고서 보기</Button>
@@ -35,7 +53,43 @@ export const PostUser = () => {
             <SectionTitle>프로젝트 기간</SectionTitle>
             <Writing>2024.08.26 ~ 2024.08.26</Writing>
           </Section>
+          <Section>
+            <SectionTitle>모집 전공</SectionTitle>
+            <TagsContainer>
+              {tags.map((tag, index) => (
+                <TagComponent key={index} text={tag} />
+              ))}
+            </TagsContainer>
+          </Section>
+          <Section>
+            <SectionTitle>기술 스택</SectionTitle>
+            <TagsContainer>
+              <TagComponent text="JavaScript" />
+              <TagComponent text="React" />
+              <TagComponent text="CSS" />
+              <TagComponent text="HTML" />
+            </TagsContainer>
+            <TagsContainer>
+              <TagComponent text="Node.js" />
+              <TagComponent text="Express" />
+              <TagComponent text="MongoDB" />
+              <TagComponent text="GraphQL" />
+            </TagsContainer>
+          </Section>
       </Container>
+      {isPopupOpen && (
+        <Popup>
+          <PopupContent>
+            <label>새 태그 이름:</label>
+            <input 
+              type="text" 
+              value={newTagText} 
+              onChange={(e) => setNewTagText(e.target.value)} 
+            />
+            <button onClick={handleAddTag}>추가하기</button>
+          </PopupContent>
+        </Popup>
+      )}
     </>
   );
 }
@@ -70,19 +124,11 @@ const MainText = styled.h1`
   margin: 0;
   margin-top: 60px;
   color: #000;
-  font-family: "Pretendard Variable";
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
 `;
 
 const SubText = styled.h3`
   font-size: 17px;
   color: #000;
-  font-family: "Pretendard Variable";
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
 `;
 
 const Writing = styled.span`
@@ -90,7 +136,7 @@ const Writing = styled.span`
   width: 40vw; 
   display: flex;
   font-weight: 500;
-`
+`;
 
 const Section = styled.div`
   margin-top: 30px;
@@ -103,12 +149,10 @@ const SectionTitle = styled.h3`
   margin-bottom: 15px;
 `;
 
-const Buttons = styled.div`
-
-`;
+const Buttons = styled.div``;
 
 const Button = styled.button`
-  padding: 10px 12px 10px 12px;
+  padding: 10px 12px;
   margin-top: 20px;
   background-color: #a5d6a7;
   border: none;
@@ -117,12 +161,17 @@ const Button = styled.button`
   font-size: 14px;
   cursor: pointer;
   margin-right: 10px;
-  font-family: pretendard;
 
-  &:nth-child(3){
+  &:nth-child(3) {
     background-color: #B9B9B9;
   }
+`;
 
+const TagsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 40%;
 `;
 
 const Apply = styled.button`
@@ -137,4 +186,40 @@ const Apply = styled.button`
   float: right;
   font-size: 20px;
   font-weight: 600;
+`;
+
+const Popup = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const PopupContent = styled.div`
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+
+  button {
+    padding: 10px;
+    background-color: #588D80;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
 `;

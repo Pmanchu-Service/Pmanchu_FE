@@ -1,12 +1,13 @@
 import { Header } from '../components/Header';
 import { PostUser } from '../components/checkpost/PostUser';
-import { Tags } from '../components/checkpost/Tags';
+import { TagComponent } from '../components/checkpost/TagComponent';
+
 
 export const CheckPostPage = () => {
   return (
     <>
     <PostUser />
-    <Tags />
+    <TagComponent />
     </>
   );
 }
