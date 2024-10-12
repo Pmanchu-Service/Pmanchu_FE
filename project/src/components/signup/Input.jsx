@@ -9,7 +9,7 @@ export const Input = ({ width = "100%", height = "100%", ...props }) => {
       <InputContainer>
         <TitleContainer>
           <Text>{props.text}</Text>
-          <StyledImg src={star} />
+          <img src={star} />
         </TitleContainer>
         <StyledInput
           placeholder={props.placeholder}
@@ -21,7 +21,6 @@ export const Input = ({ width = "100%", height = "100%", ...props }) => {
   );
 };
 
-const StyledImg = styled.img``;
 const TitleContainer = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -30,7 +29,7 @@ const TitleContainer = styled.div`
 `;
 const Text = styled.p`
   font-family: "regular";
-  font-size: 20px;
+  font-size: 18px;
   color: ${theme.color.black};
 `;
 const InputContainer = styled.div`

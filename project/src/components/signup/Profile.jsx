@@ -6,13 +6,27 @@ import dumpling from "../../assets/signupImg/fluent-emoji-flat_dumpling.svg";
 export const Profile = () => {
   return (
     <>
-      <StyledDiv>
-        <img src={dumpling} />
-      </StyledDiv>
+      <Cover>
+        <StyledDiv>
+          <img src={dumpling} />
+        </StyledDiv>
+      </Cover>
     </>
   );
 };
 
+const Cover = styled.div`
+  width: 152px;
+  height: 152px;
+  border-radius: 500px;
+  z-index: 10;
+  background-color: white;
+  filter: brightness(1);
+  transition: 5s ease;
+  :hover {
+    filter: brightness(0.7);
+  }
+`;
 const StyledDiv = styled.div`
   width: 152px;
   height: 152px;

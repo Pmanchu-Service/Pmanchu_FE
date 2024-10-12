@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Input } from "../components/signup/Input";
-import { theme } from "../style/theme";
 import { Profile } from "../components/signup/Profile";
 import { PlusInput } from "../components/signup/PlusInput";
+import { SelectMjr } from "../components/signup/SelectMjr";
+import { SelectGrade } from "../components/signup/SelectGrade";
+import { StartButton } from "../components/signup/StartButton";
 
 export const Signup = () => {
   return (
@@ -20,7 +22,29 @@ export const Signup = () => {
           width="690px"
           placeholder="이름을 입력하세요"
         />
-        <PlusInput />
+        <PlusInput text="기술스택" placeholder="기술스택을 입력하세요" />
+        <SelectMjr />
+        <SelectGrade />
+        <Input
+          text="자기소개"
+          placeholder="자기소개를 입력하세요"
+          width="690px"
+          height="136px"
+        />
+        <Input
+          text="한 줄 자기소개"
+          placeholder="간단한 자기소개를 입력하세요"
+          width="690px"
+          height="40px"
+        />
+        <Input
+          text="연락처"
+          placeholder="인스타 아이디 또는 페이스북 아이디를 입력하세요"
+          width="690px"
+          height="40px"
+        />
+        <PlusInput text="링크" placeholder="링크를 입력하세요" />
+        <StartButton />
       </Container>
     </>
   );
