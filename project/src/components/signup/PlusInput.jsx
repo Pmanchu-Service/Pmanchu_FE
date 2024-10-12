@@ -3,15 +3,15 @@ import { theme } from "../../style/theme";
 import { Input } from "./Input";
 import plus from "../../assets/signupImg/ic_round-plus.svg";
 
-export const PlusInput = () => {
+export const PlusInput = (props) => {
   return (
     <>
       <InputContainer>
         <Input
-          text="기술스택"
+          text={props.text}
           width="638px"
           height="40px"
-          placeholder="기술 스택을 입력하세요"
+          placeholder={props.placeholder}
         />
         <PlusBtn />
       </InputContainer>
