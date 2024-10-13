@@ -1,4 +1,3 @@
-import { theme } from "../../style/theme";
 import styled from "styled-components";
 import star from "../../assets/signupImg/mingcute_asterisk-fill.svg";
 import { Checkbox } from "./Checkbox";
@@ -12,33 +11,30 @@ export const SelectMjr = () => {
           <StyledImg src={star} />
         </Title>
         <StyledDiv>
-          <LeftSection>
+          <A>
             <Checkbox text="Back-end" />
             <Checkbox text="Front-end" />
             <Checkbox text="Flutter" />
             <Checkbox text="AOS" />
             <Checkbox text="DevOps" />
-          </LeftSection>
-          <RightSection>
+          </A>
+          <A>
             <Checkbox text="디자인" />
             <Checkbox text="iOS" />
             <Checkbox text="임베디드" />
             <Checkbox text="정보보안" />
             <Checkbox text="AI" />
-          </RightSection>
+          </A>
         </StyledDiv>
       </Container>
     </>
   );
 };
 
-const RightSection = styled.div`
+const A = styled.div`
   display: flex;
   flex-direction: column;
-`;
-const LeftSection = styled.div`
-  display: flex;
-  flex-direction: column;
+  gap: 16px;
 `;
 const StyledDiv = styled.div`
   width: 400px;
@@ -64,5 +60,4 @@ const StyledText = styled.p`
 const Container = styled.div`
   width: 690px;
   height: 244px;
-  margin-bottom: 20px;
 `;

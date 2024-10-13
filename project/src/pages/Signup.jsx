@@ -12,10 +12,13 @@ export const Signup = () => {
     <>
       <Container>
         <StyledDiv>
-          <Title>회원가입</Title>
-          <Subtitle>정보를 입력해주세요!</Subtitle>
+          <TitleContainer>
+            <Title>회원가입</Title>
+            <Subtitle>정보를 입력해주세요!</Subtitle>
+          </TitleContainer>
+          <Profile />
         </StyledDiv>
-        <Profile />
+
         <Input
           text="이름(본명)"
           height="40px"
@@ -50,11 +53,17 @@ export const Signup = () => {
   );
 };
 
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+`;
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 32px;
+  gap: 32px;
 `;
 const Subtitle = styled.p`
   font-size: 24px;
@@ -67,7 +76,6 @@ const Title = styled.p`
   line-height: 57px;
   font-weight: 600;
   display: block;
-  margin-bottom: 8px;
 `;
 const Container = styled.div`
   width: 100vw;
@@ -76,4 +84,5 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 36px;
 `;

@@ -19,7 +19,6 @@ const StyledText = styled.p`
 const StyledDiv = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
 `;
 const StyledInput = styled.input`
   width: 16px;

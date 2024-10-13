@@ -25,18 +25,17 @@ const TitleContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-bottom: 8px;
 `;
 const Text = styled.p`
-  font-family: "regular";
   font-size: 18px;
+  font-weight: 400;
   color: ${theme.color.black};
 `;
 const InputContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  margin-bottom: 36px;
+  gap: 8px;
 `;
 const StyledInput = styled.input`
   width: 690px;

@@ -71,5 +71,4 @@ const StyleDiv = styled.div`
   height: 76px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 36px;
 `;
