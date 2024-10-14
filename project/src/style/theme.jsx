@@ -5,11 +5,12 @@ export const theme = {
     red: "F9291C",
 
     main: {
-      1: "#FFE7AF",
-      2: "#FFD97F",
-      3: "#FFCB53",
-      4: "#FFBD22",
-      5: "#FFB300",
+
+      1: "#FFD97F",
+      2: "#FFCB53",
+      3: "#FFBD22",
+      4: "#FFB300",
+      5: "#FAA600",
     },
     gray: {
       1: "#EBEBEB",
