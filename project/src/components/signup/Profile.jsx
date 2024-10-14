@@ -7,33 +7,22 @@ export const Profile = () => {
   return (
     <>
       <Cover>
-        <StyledDiv>
-          <img src={dumpling} />
-        </StyledDiv>
+        <StyledDiv />
       </Cover>
     </>
   );
 };
 
 const Cover = styled.div`
-  width: 152px;
-  height: 152px;
-  border-radius: 500px;
-  z-index: 10;
-  background-color: white;
-  filter: brightness(1);
-  transition: 5s ease;
   :hover {
-    filter: brightness(0.7);
+    filter: brightness(70%);
   }
 `;
 const StyledDiv = styled.div`
   width: 152px;
   height: 152px;
-  border-radius: 500px;
+  border-radius: 76px;
   border: 5px solid ${theme.color.main[4]};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 48px;
+  background-image: url(${dumpling});
+  background-color: ${theme.color.white};
 `;
