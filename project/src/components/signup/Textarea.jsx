@@ -3,16 +3,16 @@ import styled from "styled-components";
 import { theme } from "../../style/theme";
 import star from "../../assets/signupImg/mingcute_asterisk-fill.svg";
 
-export const Input = (props) => {
+export const Textarea = (props) => {
   return (
     <>
-      <InputContainer>
+      <TextareaContainer>
         <TitleContainer>
           <Text>{props.text}</Text>
           <img src={star} alt="필수 입력" />
         </TitleContainer>
-        <StyledInput placeholder={props.placeholder} />
-      </InputContainer>
+        <StyledTextarea placeholder={props.placeholder} cols="30" rows="5" />
+      </TextareaContainer>
     </>
   );
 };
@@ -27,15 +27,15 @@ const Text = styled.p`
   font-weight: 400;
   color: ${theme.color.black};
 `;
-const InputContainer = styled.div`
+const TextareaContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   gap: 8px;
 `;
-const StyledInput = styled.input`
+const StyledTextarea = styled.textarea`
   width: 690px;
-  height: 40px;
+  height: 136px;
   border-radius: 8px;
   background-color: ${theme.color.gray[1]};
   border: 1px solid ${theme.color.gray[2]};
@@ -45,4 +45,6 @@ const StyledInput = styled.input`
     font-weight: 400;
     color: ${theme.color.gray[5]};
   }
+  resize: none;
+  padding: 8px 0 0 12px;
 `;
