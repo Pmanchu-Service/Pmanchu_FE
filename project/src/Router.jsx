@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Mypage } from './pages/Mypage';
 import { UserSearchPage } from './pages/UserSearchPage';
 import { CheckPostPage } from './pages/CheckPostPage';
+import { PlanPage } from './pages/PlanInquiryPage';
 import { MainPage } from './pages/MainPage';
 import { HeadHuntingPage } from './pages/HeadHuntingPage';
 import { Signup } from './pages/Signup';
@@ -18,7 +19,8 @@ export const Router = () => {
         <Route path="/usersearch" element={<UserSearchPage />} />
         <Route path="/check" element={<CheckPostPage />} />
         <Route path="/HeadHuntingPage" element={<HeadHuntingPage />} />
-        <Route path="/signup" element={<Signup/>} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/plan" element={<PlanPage />} />
       </Routes>
     </BrowserRouter>
   );

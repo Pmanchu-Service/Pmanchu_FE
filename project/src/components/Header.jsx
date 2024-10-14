@@ -4,15 +4,9 @@ import { ReactComponent as Icon } from "../assets/Pmanchu_Logo.svg"
 import { useState } from "react"
 import { CreateProjectBtn } from "./button/CreateProjectBtn"
 import { HeaderTextBtn } from "./button/HeaderTextBtn"
-<<<<<<< Updated upstream
 import { ReactComponent as Bell } from "../assets/mainpage/bell.svg"
 import { ReactComponent as Belled } from "../assets/mainpage/belled.svg"
 import { SearchBar } from "./search/SearchBar"
-=======
-import { ReactComponent as Bell } from "../assets/bell.svg"
-import { ReactComponent as Belled } from "../assets/belled.svg"
-import { ReactComponent as SearchBtn } from "../assets/SearchBtn.svg"
->>>>>>> Stashed changes
 
 export const Header = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -23,12 +17,7 @@ export const Header = () => {
       { isLogin ? 
         (<LoginContainer>
           <Icon cursor="pointer"></Icon>
-          <Search>
-            <SearchGroup>
-              <SearchBtn/>
-              검색창
-            </SearchGroup>
-          </Search>
+          <SearchBar isUserSearch={false} />
           <RightGroup>
             <TextGroup>
               <HeaderTextBtn Title={'좋아요한 프젝'}/>
