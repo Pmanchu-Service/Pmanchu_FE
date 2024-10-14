@@ -15,22 +15,27 @@ export const SelectGrade = () => {
           <StyledOption value="" disabled selected>
             기수를 선택하세요
           </StyledOption>
-          <option>10</option>
-          <option>9</option>
-          <option>8</option>
-          <option>7</option>
-          <option>6</option>
-          <option>5</option>
-          <option>4</option>
-          <option>3</option>
-          <option>2</option>
-          <option>1</option>
+          <Option>10</Option>
+          <Option>9</Option>
+          <Option>8</Option>
+          <Option>7</Option>
+          <Option>6</Option>
+          <Option>5</Option>
+          <Option>4</Option>
+          <Option>3</Option>
+          <Option>2</Option>
+          <Option>1</Option>
         </StyledSelect>
       </StyleDiv>
     </>
   );
 };
 
+const Option = styled.option`
+  width: 344px;
+  height: 24px;
+  background-color: ${theme.color.white};
+`;
 const StyledOption = styled.option`
   ::placeholder {
     color: ${theme.color.gray[5]};
@@ -40,7 +45,6 @@ const Title = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-bottom: 8px;
 `;
 const StyledText = styled.p`
   font-size: 18px;
@@ -71,4 +75,5 @@ const StyleDiv = styled.div`
   height: 76px;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 `;
