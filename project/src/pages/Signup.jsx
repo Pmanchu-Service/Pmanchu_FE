@@ -6,6 +6,7 @@ import { PlusInput } from "../components/signup/PlusInput";
 import { SelectMjr } from "../components/signup/SelectMjr";
 import { SelectGrade } from "../components/signup/SelectGrade";
 import { StartButton } from "../components/signup/StartButton";
+import { Textarea } from "../components/signup/Textarea";
 
 export const Signup = () => {
   return (
@@ -19,32 +20,18 @@ export const Signup = () => {
           <Profile />
         </StyledDiv>
 
-        <Input
-          text="이름(본명)"
-          height="40px"
-          width="690px"
-          placeholder="이름을 입력하세요"
-        />
+        <Input text="이름(본명)" placeholder="이름을 입력하세요" />
         <PlusInput text="기술스택" placeholder="기술스택을 입력하세요" />
         <SelectMjr />
         <SelectGrade />
-        <Input
-          text="자기소개"
-          placeholder="자기소개를 입력하세요"
-          width="690px"
-          height="136px"
-        />
+        <Textarea text="자기소개" placeholder="자기소개를 입력하세요" />
         <Input
           text="한 줄 자기소개"
           placeholder="간단한 자기소개를 입력하세요"
-          width="690px"
-          height="40px"
         />
         <Input
           text="연락처"
           placeholder="인스타 아이디 또는 페이스북 아이디를 입력하세요"
-          width="690px"
-          height="40px"
         />
         <PlusInput text="링크" placeholder="링크를 입력하세요" />
         <StartButton />
@@ -78,8 +65,6 @@ const Title = styled.p`
   display: block;
 `;
 const Container = styled.div`
-  width: 100vw;
-  height: 100vw;
   padding: 52px 0;
   display: flex;
   flex-direction: column;
