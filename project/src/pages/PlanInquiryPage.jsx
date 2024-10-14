@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import { Header } from '../components/Header';
 
 export const PlanPage = () => {
   return (
     <>
+      <Header />
       <Container>
         
       </Container>
@@ -10,8 +12,10 @@ export const PlanPage = () => {
   );
 }
 
+
 const Container = styled.div`
-  width: 80%;
+  width: 40%;
+  height: calc(100vh - 64px);
   margin: 0 auto;
-  border: 1px solid black;
+  border: 0.1px solid black;
 `;
