@@ -5,6 +5,7 @@ import { TagComponent } from '../checkpost/TagComponent';
 export const PostUser = () => {
   return (
     <>
+    <ContainerBox>
       <Container>
         <ProjectTitle>
           <ProfileAdd />
@@ -13,7 +14,7 @@ export const PostUser = () => {
             <SubText>황양변김박최이하</SubText>
           </TextContainer>
         </ProjectTitle>
-        <hr />
+        <StyledHr />
         <Buttons>
           <Button>모집중...</Button>
           <Button>계획서 보기</Button>
@@ -68,15 +69,27 @@ export const PostUser = () => {
           </TagsContainer>
         </Section>
       </Container>
+    </ContainerBox>
     </> 
   );
 };
 
 const Container = styled.div`
-  width: 80%;
-  margin: 0 auto;
+  width: calc(100vw - 440px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
 `;
 
+const ContainerBox = styled.div`  
+  display: flex;
+  justify-content: center;
+`;
+
+const StyledHr = styled.hr`
+  border-top: 1px solid black;
+  width: 100%;
+`
 const ProjectTitle = styled.div`
   opacity: 90%;
   display: flex;
@@ -84,6 +97,7 @@ const ProjectTitle = styled.div`
 
 const ProfileAdd = styled.div`
   width: 10vw;
+  height: 15vh;
   background-color: #B9B9B9;
   margin-top: 40px;
   margin-bottom: 20px;
@@ -94,13 +108,12 @@ const TextContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-left: 20px;
-  margin-top: 45px;
+  margin-top: 40px;
 `;
 
 const MainText = styled.h1`
   font-size: 25px;
-  margin: 0;
-  margin-top: 60px;
+  margin-bottom: 15px;
   color: #000;
 `;
 
@@ -117,8 +130,12 @@ const Writing = styled.span`
 `;
 
 const Section = styled.div`
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 100px;
+  }
 `;
 
 const SectionTitle = styled.h3`
@@ -127,7 +144,9 @@ const SectionTitle = styled.h3`
   margin-bottom: 15px;
 `;
 
-const Buttons = styled.div``;
+const Buttons = styled.div`
+  margin-bottom: 20px;
+`;
 
 const Button = styled.button`
   padding: 10px 20px;
@@ -154,9 +173,8 @@ const TagsContainer = styled.div`
 `;
 
 const Apply = styled.button`
-  left: 69.3vw; 
-  float: right;
-  position: fixed;
+  left: 69.3vw;
+  position: sticky; 
   padding: 10px 10px;
   width: 20vw;
   margin-top: 20px;
