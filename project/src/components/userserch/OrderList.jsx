@@ -18,27 +18,23 @@ export const OrderList = () => {
   };
 
   return (
-    <>
-      <>
-        <OrderListContainer>
-          <SelectBtn onClick={selectClick}>
-            <OrderImg src={orderImg} alt="select아이콘" />
-            {content}
-            <OrderImg src={selectArrowImg} alt="화살표" />
-          </SelectBtn>
-          {isOption && (
-            <ListContainer>
-              <ListContents onClick={() => optionClick('최신순')}>
-                <OptionBtn>최신순</OptionBtn>
-              </ListContents>
-              <ListContents onClick={() => optionClick('프로젝트 많이 한 순')}>
-                <OptionBtn>프로젝트 많이 한 순</OptionBtn>
-              </ListContents>
-            </ListContainer>
-          )}
-        </OrderListContainer>
-      </>
-    </>
+    <OrderListContainer>
+      <SelectBtn onClick={selectClick}>
+        <OrderImg src={orderImg} alt="select아이콘" />
+        {content}
+        <OrderImg src={selectArrowImg} alt="화살표" />
+      </SelectBtn>
+      {isOption && (
+        <ListContainer>
+          <ListContents onClick={() => optionClick('최신순')}>
+            <OptionBtn>최신순</OptionBtn>
+          </ListContents>
+          <ListContents onClick={() => optionClick('프로젝트 많이 한 순')}>
+            <OptionBtn>프로젝트 많이 한 순</OptionBtn>
+          </ListContents>
+        </ListContainer>
+      )}
+    </OrderListContainer>
   );
 };
 

@@ -1,14 +1,35 @@
 import styled from 'styled-components';
 import { theme } from '../../style/theme';
 import { Button } from '../button/Button';
+import React, { useState } from 'react';
 
-export const UserList = ({ name, intro, type }) => {
+export const UserList = React.memo(({ name, intro, type }) => {
+  const [projectOffer, setProjectOffer] = useState(false);
+
+  const projectOfferClick = () => {
+    setProjectOffer(!projectOffer);
+  };
+
   const userListType = {
-    projectContain: <Button value={'프로젝트 제의'} />,
+    projectContain: projectOffer ? (
+      <Button value={'제의 완료'} onClick={projectOfferClick} />
+    ) : (
+      <Button value={'프로젝트 제의'} onClick={projectOfferClick} />
+    ),
     accept: (
       <IsAcceptContainer>
-        <Button value={'수락'} isAccept={true} type="acceptLogo" />
-        <Button value={'거절'} isAccept={false} type="acceptLogo" />
+        <Button
+          value={'수락'}
+          isAccept={true}
+          type="acceptLogo"
+          // onClick={onClick}
+        />
+        <Button
+          value={'거절'}
+          isAccept={false}
+          type="acceptLogo"
+          // onClick={onClick}
+        />
       </IsAcceptContainer>
     ),
   };
@@ -27,7 +48,7 @@ export const UserList = ({ name, intro, type }) => {
       <Line />
     </UserListContainer>
   );
-};
+});
 
 const IsAcceptContainer = styled.div`
   display: flex;
