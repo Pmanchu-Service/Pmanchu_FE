@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../style/theme";
-import star from "../../assets/signupImg/mingcute_asterisk-fill.svg";
+import star from "../../assets/signup-loginImg/mingcute_asterisk-fill.svg";
 
 export const Textarea = (props) => {
   return (

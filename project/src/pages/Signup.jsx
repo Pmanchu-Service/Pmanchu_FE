@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { Input } from "../components/signup/Input";
-import { Profile } from "../components/signup/Profile";
-import { PlusInput } from "../components/signup/PlusInput";
-import { SelectMjr } from "../components/signup/SelectMjr";
-import { SelectGrade } from "../components/signup/SelectGrade";
-import { StartButton } from "../components/signup/StartButton";
-import { Textarea } from "../components/signup/Textarea";
+import { Input } from "../components/signup-login/Input";
+import { Profile } from "../components/signup-login/Profile";
+import { PlusInput } from "../components/signup-login/PlusInput";
+import { SelectMjr } from "../components/signup-login/SelectMjr";
+import { SelectGrade } from "../components/signup-login/SelectGrade";
+import { StartButton } from "../components/signup-login/StartButton";
+import { Textarea } from "../components/signup-login/Textarea";
 
 export const Signup = () => {
   return (

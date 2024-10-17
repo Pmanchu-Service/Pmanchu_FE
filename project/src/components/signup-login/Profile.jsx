@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 import { theme } from "../../style/theme";
-import dumpling from "../../assets/signupImg/fluent-emoji-flat_dumpling.svg";
+import dumpling from "../../assets/signup-loginImg/fluent-emoji-flat_dumpling.svg";
 
 export const Profile = () => {
   return (
