@@ -4,8 +4,8 @@ import { ReactComponent as Icon } from "../assets/Pmanchu_Logo.svg"
 import { useState } from "react"
 import { CreateProjectBtn } from "./button/CreateProjectBtn"
 import { HeaderTextBtn } from "./button/HeaderTextBtn"
-import { ReactComponent as Bell } from "../assets/bell.svg"
-import { ReactComponent as Belled } from "../assets/belled.svg"
+import { ReactComponent as Bell } from "../assets/mainpage/bell.svg"
+import { ReactComponent as Belled } from "../assets/mainpage/belled.svg"
 import { SearchBar } from "./search/SearchBar"
 
 export const Header = () => {
@@ -19,7 +19,7 @@ export const Header = () => {
           <Icon cursor="pointer"></Icon>
           <SearchBar isUserSearch={false} />
           <RightGroup>
-            <TextGroup>
+            <TextGroup> 
               <HeaderTextBtn Title={'좋아요한 프젝'}/>
               <Stick/>
               <HeaderTextBtn Title={'유저 검색'}/>
@@ -42,7 +42,6 @@ export const Header = () => {
 
 const LogoutContainer = styled.div`
   box-sizing: border-box;
-  width: 100vw;
   height: 64px;
   border-bottom: 1px solid #CCCCCC;
   display: flex;
@@ -53,7 +52,6 @@ const LogoutContainer = styled.div`
 
 const LoginContainer = styled.div`
   box-sizing: border-box;
-  width: 100vw;
   height: 64px;
   border-bottom: 1px solid #CCCCCC;
   padding: 0 36px 0 32px;
