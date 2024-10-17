@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import github from "../../assets/signup-loginImg/github-6980894_1280 1.svg";
+import github from "../../assets/signupImg/github-6980894_1280 1.svg";
 
 export const LoginModal = () => {
   return (
