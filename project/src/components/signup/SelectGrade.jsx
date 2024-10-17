@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../style/theme";
-import arrow from "../../assets/signup-loginImg/iconamoon_arrow-up-2-light.svg";
-import star from "../../assets/signup-loginImg/mingcute_asterisk-fill.svg";
+import arrow from "../../assets/signupImg/iconamoon_arrow-up-2-light.svg";
+import star from "../../assets/signupImg/mingcute_asterisk-fill.svg";
 
 export const SelectGrade = () => {
   return (

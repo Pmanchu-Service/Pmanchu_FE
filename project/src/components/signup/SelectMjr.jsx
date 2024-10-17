@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import star from "../../assets/signup-loginImg/mingcute_asterisk-fill.svg";
+import star from "../../assets/signupImg/mingcute_asterisk-fill.svg";
 import { Checkbox } from "./Checkbox";
 
 export const SelectMjr = () => {

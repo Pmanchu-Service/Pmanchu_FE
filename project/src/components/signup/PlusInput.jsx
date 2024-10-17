@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../style/theme";
-import star from "../../assets/signup-loginImg/mingcute_asterisk-fill.svg";
-import plus from "../../assets/signup-loginImg/ic_round-plus.svg";
+import star from "../../assets/signupImg/mingcute_asterisk-fill.svg";
+import plus from "../../assets/signupImg/ic_round-plus.svg";
 
 export const PlusInput = (props) => {
   return (
