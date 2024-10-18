@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Input } from "../components/signup/Input";
 import { Profile } from "../components/signup/Profile";
-import { PlusInput } from "../components/signup/PlusInput";
 import { SelectMjr } from "../components/signup/SelectMjr";
 import { SelectGrade } from "../components/signup/SelectGrade";
 import { StartButton } from "../components/signup/StartButton";
@@ -21,7 +20,11 @@ export const Signup = () => {
         </StyledDiv>
 
         <Input text="이름(본명)" placeholder="이름을 입력하세요" />
-        <PlusInput text="기술스택" placeholder="기술스택을 입력하세요" />
+        <Input
+          type={"plus"}
+          text="기술스택"
+          placeholder="기술스택을 입력하세요"
+        />
         <SelectMjr />
         <SelectGrade />
         <Textarea text="자기소개" placeholder="자기소개를 입력하세요" />
@@ -33,7 +36,7 @@ export const Signup = () => {
           text="연락처"
           placeholder="인스타 아이디 또는 페이스북 아이디를 입력하세요"
         />
-        <PlusInput text="링크" placeholder="링크를 입력하세요" />
+        <Input type={"plus"} text="링크" placeholder="링크를 입력하세요" />
         <StartButton />
       </Container>
     </>

@@ -15,16 +15,16 @@ export const SelectGrade = () => {
           <StyledOption value="" disabled selected>
             기수를 선택하세요
           </StyledOption>
-          <Option>10</Option>
-          <Option>9</Option>
-          <Option>8</Option>
-          <Option>7</Option>
-          <Option>6</Option>
-          <Option>5</Option>
-          <Option>4</Option>
-          <Option>3</Option>
-          <Option>2</Option>
-          <Option>1</Option>
+          <Option>10기</Option>
+          <Option>9기</Option>
+          <Option>8기</Option>
+          <Option>7기</Option>
+          <Option>6기</Option>
+          <Option>5기</Option>
+          <Option>4기</Option>
+          <Option>3기</Option>
+          <Option>2기</Option>
+          <Option>1기</Option>
         </StyledSelect>
       </StyleDiv>
     </>
