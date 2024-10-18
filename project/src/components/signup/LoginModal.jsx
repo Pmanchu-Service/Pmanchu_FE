@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import github from "../../assets/signupImg/github-6980894_1280 1.svg";
+import { theme } from "../../style/theme";
 
 export const LoginModal = () => {
   return (
@@ -7,9 +8,11 @@ export const LoginModal = () => {
       <ModalContainer>
         <TextBox>
           <Title>로그인</Title>
-          <SubTitle>
-            깃허브로 <Hlight>프만추</Hlight>에 로그인 하세요
-          </SubTitle>
+          <StyledContent>
+            <SubTitle>깃허브로</SubTitle>
+            <Hlight>&nbsp;프만추</Hlight>
+            <SubTitle>에 로그인 하세요</SubTitle>
+          </StyledContent>
         </TextBox>
         <StyledButton>
           <ButtnContainer>
@@ -22,6 +25,10 @@ export const LoginModal = () => {
   );
 };
 
+const StyledContent = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 const GithubImg = styled.img`
   width: 53px;
   height: 47px;
@@ -47,7 +54,9 @@ const StyledButton = styled.button`
   border: none;
 `;
 const Hlight = styled.p`
-  color: orange;
+  color: ${theme.color.main[3]};
+  font-size: 24px;
+  font-weight: 500;
 `;
 const SubTitle = styled.p`
   font-size: 24px;
