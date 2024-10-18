@@ -1,12 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const TagComponent = ( ) => {
-  return (
-    <Tag>
-      test
-    </Tag>
-  );
+
+export const TagComponent = ({ text }) => {
+  return <Tag>{text}</Tag>;
 };
 
 const Tag = styled.button`

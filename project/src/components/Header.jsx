@@ -19,7 +19,7 @@ export const Header = () => {
           <Icon cursor="pointer"></Icon>
           <SearchBar isUserSearch={false} />
           <RightGroup>
-            <TextGroup>
+            <TextGroup> 
               <HeaderTextBtn Title={'좋아요한 프젝'}/>
               <Stick/>
               <HeaderTextBtn Title={'유저 검색'}/>
