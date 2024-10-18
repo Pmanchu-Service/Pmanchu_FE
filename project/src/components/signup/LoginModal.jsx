@@ -36,7 +36,7 @@ const GithubImg = styled.img`
 const ButtonText = styled.p`
   font-size: 20px;
   font-weight: 700;
-  color: white;
+  color: ${theme.color.white};
 `;
 const ButtnContainer = styled.div`
   display: flex;
@@ -79,7 +79,7 @@ const ModalContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: ${theme.color.white};
   border-radius: 10px;
   padding: 52px 0 0 0;
   gap: 46px;
