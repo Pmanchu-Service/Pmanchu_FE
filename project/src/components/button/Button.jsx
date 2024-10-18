@@ -4,7 +4,7 @@ import edit from '../../assets/mypageImg/edit.svg';
 import rejectImg from '../../assets/usersearchpageImg/reject.svg';
 import acceptImg from '../../assets/usersearchpageImg/accept.svg';
 
-export const Button = ({ value, isAccept, type }) => {
+export const Button = ({ value, isAccept, type, onClick }) => {
   const buttonType = {
     editLogo: <img src={edit} alt="수정로고" />,
     acceptLogo: isAccept ? (
@@ -14,7 +14,7 @@ export const Button = ({ value, isAccept, type }) => {
     ),
   };
   return (
-    <ButtonContainer isAccept={isAccept}>
+    <ButtonContainer isAccept={isAccept} onClick={onClick}>
       {true && buttonType[type]}
       {/*true일 땐 본인이 마이페이지 볼 때, false일 땐 타인이 다른 사람의 마이페이지를 볼 때*/}
       {value}
