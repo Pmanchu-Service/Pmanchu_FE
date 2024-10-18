@@ -5,7 +5,6 @@ import { TagComponent } from '../checkpost/TagComponent';
 export const PostUser = () => {
   return (
     <>
-      <Container>
         <ProjectTitle>
           <ProfileAdd />
           <TextContainer>
@@ -67,15 +66,9 @@ export const PostUser = () => {
             <TagComponent text="MongoDB" />
           </TagsContainer>
         </Section>
-      </Container>
     </> 
   );
 };
-
-const Container = styled.div`
-  width: 80%;
-  margin: 0 auto;
-`;
 
 const ProjectTitle = styled.div`
   opacity: 90%;

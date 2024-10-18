@@ -3,6 +3,32 @@ import DataTable from 'react-data-table-component';
 import { Header } from "../components/Header";
 
 export const ProjectForm = () => {
+  // 테이블 컬럼과 데이터 정의
+  const columns = [
+    { name: '학번', selector: row => row.id, sortable: true },
+    { name: '이름', selector: row => row.name, sortable: true },
+    { name: '역할', selector: row => row.role, sortable: true }
+  ];
+
+  const data = [
+    { id: '1401', name: '김소희', role: '예 저는 이 프로젝트에서 백수를 담당하고 있습니다' },
+    { id: '1011', name: '양병건', role: '예 저는 이 프로젝트에서 귀여움을 담당하고 있습니다' }
+  ];
+
+  // DataTable의 customStyles 정의
+  const customStyles = {
+    rows: {
+      style: {
+        borderBottom: '1px solid #ccc', // 요소 사이에 선 추가
+      },
+    },
+    headCells: {
+      style: {
+        fontWeight: '700',
+        backgroundColor: '#f0f0f0', // 헤더 배경색 추가
+      },
+    },
+  };
 
   return (
     <>
@@ -10,6 +36,16 @@ export const ProjectForm = () => {
       <Container>
         <Title>프로젝트 보고서</Title>
         <StyledHr />
+
+      <Project>
+        <SubTitle>프로젝트</SubTitle>
+        <StyledHr />
+        <Setting>프로젝트 이름</Setting>
+          <Edit>프만추</Edit>
+        <StyledHr />
+        <Setting>팀명</Setting>
+          <Edit>프만추</Edit>
+
         <Project>
         <SubTitle>프로젝트</SubTitle>
         <StyledHr />
@@ -18,15 +54,17 @@ export const ProjectForm = () => {
         <StyledHr />
         <Setting>팀명</Setting>
         <Edit>프만추</Edit>
+
         <StyledHr />
         <Setting>팀원 및 역할</Setting>
         <DataTableContainer>
           <DataTable
             columns={columns}
             data={data}
+
+            customStyles={customStyles} // customStyles 속성 추가
+            noHeader={false} // 헤더를 표시
             pagination={false}
-            customStyles={customStyles}
-            noHeader={false}
           />
         </DataTableContainer>
         <StyledHr />
@@ -38,16 +76,25 @@ export const ProjectForm = () => {
           <Edit>제 동기요? 집에가고싶은 간절한 그 마음이 제 유일한 동기입니다 ㅅㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ</Edit>
         <StyledHr/>
         <Setting>주요 서비스</Setting>
+
+          <Edit>제 동기요? 집에가고싶은 간절한 그 마음이 제 유일한 동기입니다 ㅅㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ</Edit>
+        <StyledHr/>
+        <Setting>상세기능</Setting>
+          <Edit>제 동기요? 집에가고싶은 간절한 그 마음이 제 유일한 동기입니다 ㅅㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ</Edit>
+
           <Edit>서비스요? 집에가고싶은 간절한 그 마음이 제 유일한 서비스입니다 ㅅㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ</Edit>
         <StyledHr/>
         <Setting>상세기능</Setting>
           <Edit>기능요? 집에가고싶은 간절한 그 마음이 제 유일한 기능입  니다 ㅅㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ</Edit>
+
         <StyledHr/>
       </Outline>
       </Container>
     </>
   );
 };
+
+
 
 const columns = [
   { name: '학번', selector: row => row.id, sortable: true, width: '15%' },
@@ -79,6 +126,7 @@ const customStyles = {
     },
   },
 };
+
 
 const Container = styled.div`
   width: 35%;
