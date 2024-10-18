@@ -6,7 +6,8 @@ export const ProjectForm = () => {
 
   return (
     <>
-      <Header />
+    <Header />
+    <ContainerBox>
       <Container>
         <Title>프로젝트 보고서</Title>
         <StyledHr />
@@ -27,7 +28,7 @@ export const ProjectForm = () => {
             pagination={false}
             customStyles={customStyles}
             noHeader={false}
-          />
+            />
         </DataTableContainer>
         <StyledHr />
         </Project>
@@ -35,16 +36,17 @@ export const ProjectForm = () => {
         <SubTitle>개요</SubTitle>
         <StyledHr/>
         <Setting>프로젝트 동기</Setting>
-          <Edit>제 동기요? 집에가고싶은 간절한 그 마음이 제 유일한 동기입니다 ㅅㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ</Edit>
+          <OutlineEdit>제 동기요? 집에가고싶은 간절한 그 마음이 제 유일한 동기입니다 ㅅㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ</OutlineEdit>
         <StyledHr/>
         <Setting>주요 서비스</Setting>
-          <Edit>서비스요? 집에가고싶은 간절한 그 마음이 제 유일한 서비스입니다 ㅅㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ</Edit>
+          <OutlineEdit>서비스요? 집에가고싶은 간절한 그 마음이 제 유일한 서비스입니다 ㅅㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ</OutlineEdit>
         <StyledHr/>
         <Setting>상세기능</Setting>
-          <Edit>기능요? 집에가고싶은 간절한 그 마음이 제 유일한 기능입  니다 ㅅㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ</Edit>
-        <StyledHr/>
+          <OutlineEdit>기능요? 집에가고싶은 간절한 그 마음이 제 유일한 기능입  니다 ㅅㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ</OutlineEdit>
+        <LastStyledHr/>
       </Outline>
       </Container>
+    </ContainerBox>
     </>
   );
 };
@@ -83,9 +85,15 @@ const customStyles = {
 const Container = styled.div`
   width: 35%;
   height: calc(100vh - 64px);
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 `;
+
+const ContainerBox = styled.div`
+  display: flex;
+  justify-content: center;
+`
 
 const Title = styled.h1`
   font-size: 25px;
@@ -95,21 +103,24 @@ const Title = styled.h1`
 const SubTitle = styled.h1`
   font-size: 20px;
   float: left;
-  margin-bottom: 25px;
-  margin-top: 25px;
+  margin-bottom: 35px;
+  margin-top: 35px;
 `;
 
 const StyledHr = styled.hr`
   clear: both;
-  margin-top: 25px;
-  &:last-child
-  {
-    margin-bottom: 100px;
-  }
+  margin-top: 30px;
+  margin-bottom: 10px;
 `;
 
+const LastStyledHr = styled.hr`
+  margin-bottom: 100px;
+  clear: both;
+  margin-top: 40px;
+`
+
 const Project = styled.div`
-  margin: 0; 
+  
 `
 
 const Outline = styled.div`
@@ -127,12 +138,19 @@ const Setting = styled.span`
 
 const Edit = styled.span`
   float: left;
-  margin-bottom: 10px;
   margin-left: 20px;
   font-weight: 500;
   clear: both;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 `;
+
+const OutlineEdit = styled.span`
+  float: left;
+  margin-left: 20px;
+  font-weight: 500;
+  clear: both;
+  margin-bottom: 40px;
+`
 
 const DataTableContainer = styled.div`
   width: 95%;
