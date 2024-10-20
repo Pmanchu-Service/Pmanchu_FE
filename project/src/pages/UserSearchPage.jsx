@@ -9,7 +9,6 @@ import { theme } from '../style/theme';
 
 export const UserSearchPage = () => {
   const [tagColor, setTagColor] = useState(Array(10).fill(false));
-  // const [projectOffer, setProjectOffer] = useState(false);
 
   const tagClick = useCallback((index) => {
     setTagColor((prevColors) => {
@@ -19,9 +18,6 @@ export const UserSearchPage = () => {
     });
   }, []);
 
-  // const projectOfferClick = useCallback(() => {
-  //   setProjectOffer(true);
-  // }, []);
 
   return (
     <UserSearchContainer>
