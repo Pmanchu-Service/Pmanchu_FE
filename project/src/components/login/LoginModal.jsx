@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import github from "../../assets/signupImg/github-6980894_1280 1.svg";
+import { theme } from "../../style/theme";
 
 export const LoginModal = () => {
   return (
@@ -46,8 +47,8 @@ const StyledButton = styled.button`
   padding: 6px 0 7px 0;
   border: none;
 `;
-const Hlight = styled.p`
-  color: orange;
+const Hlight = styled.span`
+  color: ${theme.color.main[3]};
 `;
 const SubTitle = styled.p`
   font-size: 24px;
