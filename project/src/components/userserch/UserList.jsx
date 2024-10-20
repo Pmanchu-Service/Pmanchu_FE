@@ -18,18 +18,8 @@ export const UserList = React.memo(({ name, intro, type }) => {
     ),
     accept: (
       <IsAcceptContainer>
-        <Button
-          value={'수락'}
-          isAccept={true}
-          type="acceptLogo"
-          // onClick={onClick}
-        />
-        <Button
-          value={'거절'}
-          isAccept={false}
-          type="acceptLogo"
-          // onClick={onClick}
-        />
+        <Button value={'수락'} isAccept={true} type="acceptLogo" />
+        <Button value={'거절'} isAccept={false} type="acceptLogo" />
       </IsAcceptContainer>
     ),
   };
@@ -94,8 +84,9 @@ const UserImgContents = styled.div`
 `;
 
 const UserListAll = styled.div`
+  width: 520px;
   display: flex;
-  gap: 225px;
+  justify-content: space-between;
 `;
 
 const Line = styled.div`

@@ -18,7 +18,7 @@ export const Button = ({ value, isAccept, type, onClick }) => {
       {true && buttonType[type]}
       {/*true일 땐 본인이 마이페이지 볼 때, false일 땐 타인이 다른 사람의 마이페이지를 볼 때*/}
       {value}
-      {buttonType[type]}
+      {false && buttonType[type]}
     </ButtonContainer>
   );
 };
