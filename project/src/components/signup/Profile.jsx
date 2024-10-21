@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React from "react";
 import { theme } from "../../style/theme";
 import dumpling from "../../assets/signupImg/fluent-emoji-flat_dumpling.svg";
+import write from "../../assets/signupImg/ri_pencil-fill.svg";
 
 export const Profile = () => {
   return (
@@ -15,7 +16,7 @@ export const Profile = () => {
 
 const Cover = styled.div`
   :hover {
-    filter: brightness(70%);
+    filter: brightness(80%);
   }
 `;
 const StyledDiv = styled.div`

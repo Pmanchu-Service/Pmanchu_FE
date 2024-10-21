@@ -2,21 +2,40 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../style/theme";
 import star from "../../assets/signupImg/mingcute_asterisk-fill.svg";
+import plus from "../../assets/signupImg/ic_round-plus.svg";
 
-export const Input = (props) => {
+export const Input = ({ placeholder, text, type }) => {
   return (
     <>
-      <InputContainer>
+      <InputContainer type={type}>
         <TitleContainer>
-          <Text>{props.text}</Text>
+          <Text>{text}</Text>
           <img src={star} alt="필수 입력" />
         </TitleContainer>
-        <StyledInput placeholder={props.placeholder} />
+        <StyledContent>
+          <StyledInput placeholder={placeholder} />
+          {type === "plus" && <PlusBtn />}
+        </StyledContent>
       </InputContainer>
     </>
   );
 };
 
+const StyledContent = styled.div`
+  width: 690px;
+  display: flex;
+  gap: 12px;
+`;
+const PlusBtn = styled.button`
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  background-color: ${theme.color.gray[4]};
+  background-image: url(${plus});
+  background-position: center center;
+  cursor: pointer;
+`;
 const TitleContainer = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -34,7 +53,7 @@ const InputContainer = styled.div`
   gap: 8px;
 `;
 const StyledInput = styled.input`
-  width: 690px;
+  width: 100%;
   height: 40px;
   border-radius: 8px;
   background-color: ${theme.color.gray[1]};

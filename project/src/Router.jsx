@@ -1,11 +1,12 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Mypage } from './pages/Mypage';
-import { UserSearchPage } from './pages/UserSearchPage';
-import { CheckPostPage } from './pages/CheckPostPage';
-import { MainPage } from './pages/MainPage';
-import { HeadHuntingPage } from './pages/HeadHuntingPage';
-import { Signup } from './pages/Signup';
-import { ProjectForm } from './pages/ProjectFormPage';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Mypage } from "./pages/Mypage";
+import { UserSearchPage } from "./pages/UserSearchPage";
+import { CheckPostPage } from "./pages/CheckPostPage";
+import { MainPage } from "./pages/MainPage";
+import { HeadHuntingPage } from "./pages/HeadHuntingPage";
+import { Signup } from "./pages/Signup";
+import { ProjectForm } from "./pages/ProjectFormPage";
+import { LoginPage } from "./pages/LoginPage";
 import { ViewPeoplePage } from './pages/ViewPeoplePage';
 
 // import { Mypage_me } from './pages/Mypage_me';
@@ -22,6 +23,7 @@ export const Router = () => {
         <Route path="/HeadHuntingPage" element={<HeadHuntingPage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/plan" element={<ProjectForm />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/viewpeople" element={<ViewPeoplePage />} />
       </Routes>
     </BrowserRouter>
