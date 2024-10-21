@@ -18,7 +18,7 @@ export const ViewPeoplePage = () => {
             <Line />
           </TitleContainer>
           <UserListContainer>
-            {isSelected && (
+            {isSelected ? (
               <>
                 <UserList
                   type="accept"
@@ -32,6 +32,24 @@ export const ViewPeoplePage = () => {
                 />
                 <UserList
                   type="accept"
+                  name="sohee_ttohee"
+                  intro="안녕하세요 떵깨"
+                />
+              </>
+            ) : (
+              <>
+                <UserList
+                  type="projectTeam"
+                  name="sohee_ttohee"
+                  intro="안녕하세요 떵깨"
+                />
+                <UserList
+                  type="projectTeam"
+                  name="sohee_ttohee"
+                  intro="안녕하세요 떵깨"
+                />
+                <UserList
+                  type="projectTeam"
                   name="sohee_ttohee"
                   intro="안녕하세요 떵깨"
                 />

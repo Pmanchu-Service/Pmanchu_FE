@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { theme } from '../../style/theme';
 import { Button } from '../button/Button';
 import React, { useState } from 'react';
+import { TeamAttribute } from './userlist/TeamAttribute';
 
 export const UserList = React.memo(({ name, intro, type }) => {
   const [projectOffer, setProjectOffer] = useState(false);
@@ -22,6 +23,7 @@ export const UserList = React.memo(({ name, intro, type }) => {
         <Button value={'거절'} isAccept={false} type="acceptLogo" />
       </IsAcceptContainer>
     ),
+    projectTeam: <TeamAttribute />,
   };
   return (
     <UserListContainer>
