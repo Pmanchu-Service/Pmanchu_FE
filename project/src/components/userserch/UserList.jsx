@@ -12,14 +12,14 @@ export const UserList = React.memo(({ name, intro, type }) => {
 
   const userListType = {
     projectContain: projectOffer ? (
-      <Button value={'제의 완료'} onClick={projectOfferClick} />
+      <Button children={'제의 완료'} onClick={projectOfferClick} />
     ) : (
-      <Button value={'프로젝트 제의'} onClick={projectOfferClick} />
+      <Button children={'프로젝트 제의'} onClick={projectOfferClick} />
     ),
     accept: (
       <IsAcceptContainer>
-        <Button value={'수락'} isAccept={true} type="acceptLogo" />
-        <Button value={'거절'} isAccept={false} type="acceptLogo" />
+        <Button children={'수락'} isAccept={true} type="acceptLogo" />
+        <Button children={'거절'} isAccept={false} type="acceptLogo" />
       </IsAcceptContainer>
     ),
   };

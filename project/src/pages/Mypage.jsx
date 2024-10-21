@@ -16,7 +16,7 @@ export const Mypage = () => {
         <MypageContents>
           <ProfileContainer>
             <EditContainer>
-              <Button value={true ? '수정' : '프로젝트 제의'} />
+              <Button children={true ? '수정' : '프로젝트 제의'} />
             </EditContainer>
             <ProfileAll>
               <img src={profile} alt="프로필 이미지" />
@@ -24,6 +24,7 @@ export const Mypage = () => {
                 <ProfileContents>프만이</ProfileContents>
                 <ProfileLine />
                 <ProfileContents>Front-end</ProfileContents>
+                <GradeTitle>10기</GradeTitle>
               </ProfileSubAll>
             </ProfileAll>
           </ProfileContainer>
@@ -114,11 +115,16 @@ export const Mypage = () => {
   );
 };
 
+const GradeTitle = styled.div`
+  font-size: 24px;
+  font-weight: 500;
+`;
+
 const MypageContents = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 52px;
+  gap: 64px;
 `;
 
 const DescriptionContainer = styled.div`
