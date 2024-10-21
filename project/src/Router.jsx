@@ -7,6 +7,8 @@ import { HeadHuntingPage } from "./pages/HeadHuntingPage";
 import { Signup } from "./pages/Signup";
 import { ProjectForm } from "./pages/ProjectFormPage";
 import { WritePostPage } from "./pages/WritePostPage";
+import { LoginPage } from "./pages/LoginPage";
+import { ViewPeoplePage } from './pages/ViewPeoplePage';
 
 // import { Mypage_me } from './pages/Mypage_me';
 
@@ -23,6 +25,8 @@ export const Router = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/plan" element={<ProjectForm />} />
         <Route path="/writePost" element={<WritePostPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/viewpeople" element={<ViewPeoplePage />} />
       </Routes>
     </BrowserRouter>
   );
