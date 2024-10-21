@@ -6,6 +6,7 @@ import { MainPage } from "./pages/MainPage";
 import { HeadHuntingPage } from "./pages/HeadHuntingPage";
 import { Signup } from "./pages/Signup";
 import { ProjectForm } from "./pages/ProjectFormPage";
+import { WritePostPage } from "./pages/WritePostPage";
 import { LoginPage } from "./pages/LoginPage";
 import { ViewPeoplePage } from './pages/ViewPeoplePage';
 
@@ -23,6 +24,7 @@ export const Router = () => {
         <Route path="/HeadHuntingPage" element={<HeadHuntingPage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/plan" element={<ProjectForm />} />
+        <Route path="/writePost" element={<WritePostPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/viewpeople" element={<ViewPeoplePage />} />
       </Routes>
