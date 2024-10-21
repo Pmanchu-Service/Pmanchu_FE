@@ -38,32 +38,33 @@ export const PostUser = () => {
         <Section>
           <SectionTitle>모집 전공</SectionTitle>
           <TagsContainer>
-            <TagComponent />
-            <TagComponent />
-            <TagComponent />
-            <TagComponent />
-            <TagComponent />
-            <TagComponent />
-            <TagComponent />
-            <TagComponent />
-            <TagComponent />
-            <TagComponent />
-            <TagComponent />
-            <TagComponent />
+            <TagComponent text="Front-end" />
+            <TagComponent text="Back-end" />
+            <TagComponent text="IOS"/>
+            <TagComponent text="AOS"/>
+            <TagComponent text="DevOps"/>
+            <TagComponent text="Design"/>
+            <TagComponent text="Flutter"/>
+            <TagComponent text="정보보안"/>
+            <TagComponent text="embedded"/>
+            <TagComponent text="AI"/>
           </TagsContainer>
         </Section>
         <Section>
           <SectionTitle>기술 스택</SectionTitle>
-          <TagsContainer>
-            <TagComponent text="JavaScript" />
-            <TagComponent text="React" />
-            <TagComponent text="CSS" />
-            <TagComponent text="HTML" />
+          <MajorTitle>Front-end</MajorTitle>
+          <TagsContainer> 
+            <TagComponent text="REACT" />
+            <TagComponent text="REACT" />
+            <TagComponent text="REACT" />
           </TagsContainer>
-          <TagsContainer>
-            <TagComponent text="Node.js" />
-            <TagComponent text="Express" />
-            <TagComponent text="MongoDB" />
+        </Section>
+        <Section>
+          <MajorTitle>Front-end</MajorTitle>
+          <TagsContainer> 
+            <TagComponent text="REACT" />
+            <TagComponent text="REACT" />
+            <TagComponent text="REACT" />
           </TagsContainer>
         </Section>
     </> 
@@ -73,28 +74,30 @@ export const PostUser = () => {
 const ProjectTitle = styled.div`
   opacity: 90%;
   display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
 `;
 
 const ProfileAdd = styled.div`
+  height: 15vh;
   width: 10vw;
   background-color: #B9B9B9;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
 `;
 
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 20px;
-  margin-top: 45px;
+  margin-left: 30px;
 `;
 
 const MainText = styled.h1`
   font-size: 25px;
   margin: 0;
-  margin-top: 60px;
   color: #000;
+  margin-bottom: 20px;
 `;
 
 const SubText = styled.h3`
@@ -106,32 +109,51 @@ const Writing = styled.span`
   font-size: 16px;
   width: 45vw; 
   display: flex;
-  font-weight: 500;
+  font-weight: 600;
 `;
 
 const Section = styled.div`
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &:last-child{
+    padding: 0px 0px 50px 0px;
+  }
 `;
 
 const SectionTitle = styled.h3`
   font-size: 20px;
   color: #FFBD22;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
 `;
 
-const Buttons = styled.div``;
+const MajorTitle = styled.h3`
+  font-size: 20px;
+  padding: 5px 0px 5px 0px;
+`
+
+const Buttons = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+  font-weight: 700;
+
+  &:last-child{
+    display: flex;
+    float: right;
+  }
+`;
 
 const Button = styled.button`
+  height: 4vh;
   padding: 10px 20px;
-  margin-top: 20px;
   background-color: #FFBD22;
   border: none;
   border-radius: 5px;
   color: white;
   font-size: 14px;
   cursor: pointer;
-  margin-right: 15px;
   font-family: Pretendard;
 
   &:nth-child(3) {
@@ -142,17 +164,15 @@ const Button = styled.button`
 const TagsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
   width: 40%;
 `;
 
 const Apply = styled.button`
-  left: 69.3vw; 
-  float: right;
-  position: fixed;
+  display: flex;
+  justify-content: center;
   padding: 10px 10px;
   width: 20vw;
-  margin-top: 20px;
   background-color: #FFBD22;
   border: none;
   border-radius: 5px;
@@ -160,4 +180,5 @@ const Apply = styled.button`
   cursor: pointer;
   font-size: 20px;
   font-weight: 600;
+  margin-left: auto;
 `;
