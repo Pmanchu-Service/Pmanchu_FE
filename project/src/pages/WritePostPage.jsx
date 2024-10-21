@@ -8,6 +8,7 @@ import { SmallBtn } from "../components/writePost/SmallBtn";
 import { Date } from "../components/writePost/Date";
 import { Majors } from "../components/writePost/Majors";
 import { Stack } from "../components/writePost/Stack";
+import { BigBtn } from "../components/writePost/BigBtn";
 
 export const WritePostPage = () => {
   return (
@@ -25,6 +26,7 @@ export const WritePostPage = () => {
         <Date text="진행 기간" />
         <Majors />
         <Stack />
+        <BigBtn />
       </PageContainer>
     </>
   );
@@ -36,6 +38,7 @@ const PageContainer = styled.div`
   align-items: center;
   width: 100vw;
   gap: 40px;
+  padding-bottom: 160px;
 `;
 const StyledDiv = styled.div`
   display: flex;

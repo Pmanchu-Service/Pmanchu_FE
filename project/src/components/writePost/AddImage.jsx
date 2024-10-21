@@ -5,11 +5,18 @@ import cam from "../../assets/writePostImg/ph_camera.svg";
 export const AddImage = () => {
   return (
     <>
-      <StyledContainer />
+      <Cover>
+        <StyledContainer />
+      </Cover>
     </>
   );
 };
 
+const Cover = styled.div`
+  :hover {
+    filter: brightness(80%);
+  }
+`;
 const StyledContainer = styled.div`
   width: 152px;
   height: 152px;
@@ -19,7 +26,4 @@ const StyledContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center center;
   cursor: pointer;
-  :hover {
-    background-color: ${theme.color.gray[6]};
-  }
 `;
