@@ -7,11 +7,11 @@ export const TagComponent = ({ text }) => {
 };
 
 const Tag = styled.button`
-  padding: 10px 20px;
+  padding: 14px 22px;
   background-color: #ffffff;
   border-radius: 5px;
   font-size: 14px;
   color: #333;
   margin-bottom: 5px;
-  border: 0.5px solid #d8d8d8;
+  border: 1px solid #b5b5b5;
 `;

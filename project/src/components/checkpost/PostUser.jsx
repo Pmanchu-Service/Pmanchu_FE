@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'; 
 import { TagComponent } from '../checkpost/TagComponent';
+import { ReactComponent as Heart } from '../../assets/projectformpage/heart-fill.svg'
 
 export const PostUser = () => {
   return (
@@ -9,12 +10,17 @@ export const PostUser = () => {
           <ProfileAdd />
           <TextContainer>
             <MainText>큐피트 프로젝트</MainText>
-            <SubText>황양변김박최이하</SubText>
+            <ContentsContainer>
+              <SubText>황양변김박최이하</SubText>
+            </ContentsContainer>
+            <ImgContainer>
+              <Heart />
+            </ImgContainer>
           </TextContainer>
         </ProjectTitle>
         <hr />
         <Buttons>
-          <Button>모집중...</Button>
+          <Button>모집중</Button>
           <Button>계획서 보기</Button>
           <Button>보고서 보기</Button>
           <Apply>지원하기</Apply>
@@ -79,11 +85,10 @@ const ProjectTitle = styled.div`
 `;
 
 const ProfileAdd = styled.div`
-  height: 15vh;
-  width: 10vw;
+  display: flex;
+  height: 130px;
+  width: 180px;
   background-color: #B9B9B9;
-  padding-top: 40px;
-  padding-bottom: 20px;
 `;
 
 const TextContainer = styled.div`
@@ -103,7 +108,13 @@ const MainText = styled.h1`
 const SubText = styled.h3`
   font-size: 17px;
   color: #000;
+  gap: 10px;
 `;
+
+const ContentsContainer = styled.div`
+  width: 60vw;
+  display: flex;
+`
 
 const Writing = styled.span`
   font-size: 16px;
@@ -129,13 +140,13 @@ const SectionTitle = styled.h3`
 
 const MajorTitle = styled.h3`
   font-size: 20px;
-  padding: 5px 0px 5px 0px;
+  padding: 5px 0px 20px 0px;
 `
 
 const Buttons = styled.div`
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 20px;  
   padding-top: 20px;
   font-weight: 700;
 
@@ -146,20 +157,25 @@ const Buttons = styled.div`
 `;
 
 const Button = styled.button`
-  height: 4vh;
-  padding: 10px 20px;
+  padding: 12px 24px;
   background-color: #FFBD22;
   border: none;
   border-radius: 5px;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
   font-family: Pretendard;
+  font-weight: 600;
 
   &:nth-child(3) {
     background-color: #B9B9B9;
   }
 `;
+
+const ImgContainer = styled.div`
+  display: flex;
+  padding-top: 30px;
+`
 
 const TagsContainer = styled.div`
   display: flex;
