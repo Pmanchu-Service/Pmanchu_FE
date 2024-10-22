@@ -16,4 +16,5 @@ const Button = styled.button`
   border: none;
   border-radius: 10px;
   color: ${theme.color.white};
+  cursor: pointer;
 `;

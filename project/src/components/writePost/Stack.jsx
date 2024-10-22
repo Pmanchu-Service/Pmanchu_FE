@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import star from "../../assets/signupImg/mingcute_asterisk-fill.svg";
-import { TagComponent } from "../checkpost/TagComponent";
+import { SpecialtyBtn } from "../userserch/SpecialtyBtn";
 import { SpeInput } from "./SpeInput";
 
 export const Stack = () => {
@@ -12,11 +12,7 @@ export const Stack = () => {
           <img src={star} alt="필수 입력" />
         </Title>
         <StyledContent>
-          <TagComponent text="front-end" />
-          <SpeInput placeholder="스택을 입력하세요" />
-        </StyledContent>
-        <StyledContent>
-          <TagComponent text="front-end" />
+          <SpecialtyBtn text="front-end" />
           <SpeInput placeholder="스택을 입력하세요" />
         </StyledContent>
       </Container>
@@ -27,6 +23,7 @@ export const Stack = () => {
 const StyledContent = styled.div`
   display: flex;
   width: 100%;
+  height: 47px;
   gap: 8px;
 `;
 const StyledText = styled.p`
