@@ -14,10 +14,12 @@ export const PostUser_master = () => {
         <ProjectTitle>
           <ProfileAdd />
           <TextContainer>
-            <MainText>큐피트 프로젝트</MainText>
-            <ContentsContainer>
-              <SubText>황양변김박최이하</SubText>
-            </ContentsContainer>
+            <TextContent>
+              <MainText>큐피트 프로젝트</MainText>
+              <ContentsContainer>
+                <SubText>황양변김박최이하</SubText>
+              </ContentsContainer>
+            </TextContent>
               <TitleButtons>
                 <TitleBox>
                   <TitleButton>
@@ -30,7 +32,9 @@ export const PostUser_master = () => {
                     삭제
                     <TrashBtn/>
                   </TitleButton>
+                  <ImgContainer>
                     <Heart />
+                  </ImgContainer>
                 </TitleBox>
               </TitleButtons>
           </TextContainer>
@@ -103,24 +107,25 @@ const ProjectTitle = styled.div`
   display: flex;
   padding-top: 20px;
   padding-bottom: 20px;
+  width: 100%; 
 `;
 
 const ProfileAdd = styled.div`
   display: flex;
-  height: 130px;
-  width: 180px;
+  height: 150px;
+  width: 200px;
   background-color: #B9B9B9;
 `;
 
 const MainText = styled.h1`
-  font-size: 25px;
+  font-size: 27px;
   margin: 0;
   color: #000;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 `;
 
 const SubText = styled.h3`
-  font-size: 18px;
+  font-size: 20px;
   color: #000;
   gap: 10px;
 `;
@@ -158,16 +163,22 @@ const MajorTitle = styled.h3`
 
 const TextContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row; 
   align-items: flex-start;
   padding-left: 30px;
-  width: 100%; // 300px에서 100%로 변경
+  width: 100%;
+  justify-content: space-between; 
+`;
+
+const TextContent = styled.div` 
+  display: flex;
+  flex-direction: column;
 `;
 
 const TitleButtons = styled.div`
   display: flex;
   align-items: center;
-  margin-left: auto; // 추가된 부분
+  padding-top: 65px;
 `;
 
 const TitleButton = styled.button`
@@ -190,12 +201,16 @@ const TitleButton = styled.button`
     width: 120px;
     background-color: #B9B9B9;
   }
+`;
+
+const ImgContainer = styled.div`
+  padding-left: 10px;
 `
 
 const TitleBox = styled.div`
   display: flex;
   gap: 20px;
-  padding-top: 30px;
+  padding-top: 50px;
 `
 
 const Buttons = styled.div`
