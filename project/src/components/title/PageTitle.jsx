@@ -9,7 +9,8 @@ export const PageTitle = ({ title }) => {
 
 const Container = styled.div`
   width: 952px;
-  height: 62px;
+  height: 130px;
+  padding-top: 68px;
   border-bottom: 2px solid ${theme.color.gray[3]};
   display: flex;
   justify-content: center;
