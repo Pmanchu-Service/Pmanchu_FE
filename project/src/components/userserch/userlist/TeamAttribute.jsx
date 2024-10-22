@@ -19,14 +19,14 @@ export const TeamAttribute = () => {
             alt="속성 이미지"
             onClick={attributeClick}
           />
+          {isAttribute && (
+            <ListContainer>
+              <ListContents onClick={attributeClick}>퇴출</ListContents>
+              <ListLine />
+              <ListContents onClick={attributeClick}>팀장 위임</ListContents>
+            </ListContainer>
+          )}
         </ImgFakeContainer>
-        {isAttribute && (
-          <ListContainer>
-            <ListContents onClick={attributeClick}>퇴출</ListContents>
-            <ListLine />
-            <ListContents onClick={attributeClick}>팀장 위임</ListContents>
-          </ListContainer>
-        )}
       </>
     </>
   );
@@ -73,6 +73,5 @@ const ListContainer = styled.div`
   border-radius: 4px;
   gap: 8px;
   background-color: ${theme.color.white};
-  margin-left: 505px;
-  margin-top: 30px;
+  left: 10px;
 `;
