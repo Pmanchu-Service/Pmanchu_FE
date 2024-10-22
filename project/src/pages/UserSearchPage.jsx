@@ -18,13 +18,12 @@ export const UserSearchPage = () => {
     });
   }, []);
 
-
   return (
     <UserSearchContainer>
       <Header />
       <UserSearchContentsAll>
         <SearchContainer>
-          <SearchBar />
+          <SearchBar isUserSearch={true} />
           <OrderList />
         </SearchContainer>
         <UserSearchContents>
