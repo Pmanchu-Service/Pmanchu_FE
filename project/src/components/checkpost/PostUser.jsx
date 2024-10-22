@@ -8,15 +8,17 @@ export const PostUser = () => {
     <>
         <ProjectTitle>
           <ProfileAdd />
-          <TextContainer>
-            <MainText>큐피트 프로젝트</MainText>
-            <ContentsContainer>
-              <SubText>황양변김박최이하</SubText>
-            </ContentsContainer>
-            <ImgContainer>
-              <Heart />
-            </ImgContainer>
-          </TextContainer>
+            <TextContainer>
+              <TextContent>
+                <MainText>큐피트 프로젝트</MainText>
+              <ContentsContainer>
+                <SubText>황양변김박최이하</SubText>
+              </ContentsContainer>
+              </TextContent>
+              <ImgContainer>
+                <Heart />
+              </ImgContainer>
+            </TextContainer>
         </ProjectTitle>
         <hr />
         <Buttons>
@@ -82,31 +84,39 @@ const ProjectTitle = styled.div`
   display: flex;
   padding-top: 20px;
   padding-bottom: 20px;
-`;
-
-const ProfileAdd = styled.div`
-  display: flex;
-  height: 130px;
-  width: 180px;
-  background-color: #B9B9B9;
+  width: 100%; 
 `;
 
 const TextContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
-  margin-left: 30px;
+  padding-left: 30px;
+  width: 100%;
+  justify-content: space-between;
+`;
+
+const TextContent = styled.div` 
+  display: flex;
+  flex-direction: column;
+`;
+
+const ProfileAdd = styled.div`
+  display: flex;
+  height: 150px;
+  width: 200px;
+  background-color: #B9B9B9;
 `;
 
 const MainText = styled.h1`
-  font-size: 25px;
+  font-size: 27px;
   margin: 0;
   color: #000;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 `;
 
 const SubText = styled.h3`
-  font-size: 17px;
+  font-size: 20px;
   color: #000;
   gap: 10px;
 `;
@@ -174,8 +184,8 @@ const Button = styled.button`
 
 const ImgContainer = styled.div`
   display: flex;
-  padding-top: 30px;
-`
+  padding-top: 120px;
+`;
 
 const TagsContainer = styled.div`
   display: flex;

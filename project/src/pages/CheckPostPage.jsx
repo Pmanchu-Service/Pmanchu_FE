@@ -25,6 +25,7 @@ const Container = styled.div`
 `;
 
 const ContainerBox = styled.div`
+  padding-top: 30px;
   display: flex;
   justify-content: center;
 ` 
