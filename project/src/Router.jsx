@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Mypage } from "./pages/Mypage";
 import { UserSearchPage } from "./pages/UserSearchPage";
 import { CheckPostPage } from "./pages/CheckPostPage";
-import { CheckPostPage_master } from "./pages/CheckPostPage-master";
 import { MainPage } from "./pages/MainPage";
 import { HeadHuntingPage } from "./pages/HeadHuntingPage";
 import { Signup } from "./pages/Signup";
@@ -28,7 +27,6 @@ export const Router = () => {
         <Route path="/writePost" element={<WritePostPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/viewpeople" element={<ViewPeoplePage />} />
-        <Route path="/check-master" element={<CheckPostPage_master />} />
       </Routes>
     </BrowserRouter>
   );
