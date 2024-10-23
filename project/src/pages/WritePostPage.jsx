@@ -26,7 +26,7 @@ export const WritePostPage = () => {
         <Date text="진행 기간" />
         <Majors />
         <Stack />
-        <BigBtn />
+        <BigBtn text="시작하기" />
       </PageContainer>
     </>
   );
