@@ -1,4 +1,3 @@
-import { theme } from "../style/theme";
 import { Header } from "../components/Header";
 import styled from "styled-components";
 import { AddImage } from "../components/writePost/AddImage";
