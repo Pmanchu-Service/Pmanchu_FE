@@ -10,6 +10,7 @@ import { WritePostPage } from "./pages/WritePostPage";
 import { LoginPage } from "./pages/LoginPage";
 import { ViewPeoplePage } from "./pages/ViewPeoplePage";
 import { WritePlan } from "./pages/WritePlan";
+import { WriteReport } from "./pages/WriteReport";
 
 // import { Mypage_me } from './pages/Mypage_me';
 
@@ -29,6 +30,7 @@ export const Router = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/viewpeople" element={<ViewPeoplePage />} />
         <Route path="/writeplan" element={<WritePlan />} />
+        <Route path="/writeReport" element={<WriteReport />} />
       </Routes>
     </BrowserRouter>
   );
