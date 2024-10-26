@@ -11,6 +11,7 @@ import { LoginPage } from "./pages/LoginPage";
 import { ViewPeoplePage } from "./pages/ViewPeoplePage";
 import { WritePlan } from "./pages/WritePlan";
 import { WriteReport } from "./pages/WriteReport";
+import { EditUserInfo } from "./pages/EditUserInfo";
 
 // import { Mypage_me } from './pages/Mypage_me';
 
@@ -31,6 +32,7 @@ export const Router = () => {
         <Route path="/viewpeople" element={<ViewPeoplePage />} />
         <Route path="/writeplan" element={<WritePlan />} />
         <Route path="/writeReport" element={<WriteReport />} />
+        <Route path="/editUserInfo" element={<EditUserInfo />} />
       </Routes>
     </BrowserRouter>
   );
