@@ -31,8 +31,8 @@ export const Router = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/viewpeople" element={<ViewPeoplePage />} />
         <Route path="/writeplan" element={<WritePlan />} />
-        <Route path="/writeReport" element={<WriteReport />} />
-        <Route path="/editUserInfo" element={<EditUserInfo />} />
+        <Route path="/writereport" element={<WriteReport />} />
+        <Route path="/edituserinfo" element={<EditUserInfo />} />
       </Routes>
     </BrowserRouter>
   );
