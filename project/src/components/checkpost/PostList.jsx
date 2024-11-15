@@ -5,7 +5,7 @@ import selectArrowImg from '../../assets/usersearchpageImg/selectarrow.svg';
 import orderImg from '../../assets/usersearchpageImg/order.svg';
 
 export const PostList = () => {
-  const [isOption, setIsOption] = useState(true);
+  const [isOption, setIsOption] = useState(false);
   const [content, setContent] = useState('모집중');
 
   const selectClick = () => {
@@ -72,7 +72,7 @@ const SelectBtn = styled.button`
     left: 50%;
     transform: translateX(-50%);
     width: 50%;
-    height: 0.5px;
+    height: 0.1px;
     background-color: white;
   }
 `;
