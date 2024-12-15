@@ -43,9 +43,8 @@ const Container = styled.div`
 const LankBox = styled.div`
 width: 1140px;
 height: 76px;
-background: #FFBD22;
+border: solid 3px #FFCB53;
 border-radius: 10px;
-color: #fff;
 display: flex;
 box-sizing: border-box;
 align-items: center;
@@ -58,10 +57,11 @@ font-weight: 600;
 font-size: 32px;
 line-height: 42px;
 margin: 0;
+color: #FFCB53
 `
 
 const Title = styled.p`
-font-weight: 700;
+font-weight: 400;
 font-size: 20px;
 line-height: 32px;
 margin: 0;
