@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../style/theme";
 
 export const CreateProjectBtn = () => {
   return(
@@ -11,7 +12,7 @@ export const CreateProjectBtn = () => {
 const Container = styled.button`
   width: 136px;
   height: 36px;
-  background: #ABD794;
+  background: ${theme.color.main[3]};
   border-radius: 5px;
   border: none;
   cursor: pointer;
