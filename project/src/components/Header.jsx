@@ -7,6 +7,7 @@ import { HeaderTextBtn } from './button/HeaderTextBtn';
 import { ReactComponent as Bell } from '../assets/mainpage/bell.svg';
 import { ReactComponent as Belled } from '../assets/mainpage/belled.svg';
 import { SearchBar } from './search/SearchBar';
+import { ReactComponent as SearchBtn } from "../assets/SearchBtn.svg"
 
 export const Header = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -17,12 +18,19 @@ export const Header = () => {
       {isLogin ? (
         <LoginContainer>
           <Icon cursor="pointer"></Icon>
-          <SearchBar isUserSearch={false} />
           <RightGroup>
             <TextGroup>
-              <HeaderTextBtn Title={'좋아요한 프젝'} />
+              <Box>
+                <SearchBtn/>
+                <HeaderTextBtn Title={'프젝 검색'} />
+              </Box>
               <Stick />
-              <HeaderTextBtn Title={'유저 검색'} />
+              <Box>
+                <SearchBtn/>
+                <HeaderTextBtn Title={'유저 검색'} />
+              </Box>
+              <Stick />
+              <HeaderTextBtn Title={'좋아요한 프젝'} />
               <Stick />
             </TextGroup>
             {isBell ? <Belled cursor="pointer" /> : <Bell cursor="pointer" />}
@@ -81,27 +89,12 @@ const RightGroup = styled.div`
   gap: 24px;
 `;
 
-const Search = styled.div`
-  box-sizing: border-box;
-  width: 600px;
-  height: 40px;
-  background: #fafafa;
-  border: 1px solid #cccccc;
-  border-radius: 20px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-  color: #aaaaaa;
+const Box = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const SearchGroup = styled.div`
-  display: flex;
-  align-items: center;
   gap: 7px;
-`;
+  height: 100%;
+  align-items: center;
+`
 
 const TextGroup = styled.div`
   display: flex;
