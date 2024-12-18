@@ -144,11 +144,16 @@ const SearchContainer = styled.div`
   position: absolute;
   gap: 20px;
   left: 25%;
+  @media (max-width: 1024px) {
+    left: 11%;
+  }
   top: 132px;
 `;
 
 const MajorTagContainer = styled.div`
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
 `;
 
@@ -161,6 +166,9 @@ const UserSearchContainer = styled.div`
 
 const Line = styled.div`
   width: 1200px;
+  @media (max-width: 1024px) {
+    width: 900px;
+  }
   border: none;
   height: 1px;
   background-color: ${theme.color.gray[3]};
