@@ -1,17 +1,17 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Mypage } from "./pages/Mypage";
-import { UserSearchPage } from "./pages/UserSearchPage";
-import { CheckPostPage } from "./pages/CheckPostPage";
-import { MainPage } from "./pages/MainPage";
-import { HeadHuntingPage } from "./pages/HeadHuntingPage";
-import { Signup } from "./pages/Signup";
-import { ProjectForm } from "./pages/ProjectFormPage";
-import { WritePostPage } from "./pages/WritePostPage";
-import { LoginPage } from "./pages/LoginPage";
-import { ViewPeoplePage } from "./pages/ViewPeoplePage";
-import { WritePlan } from "./pages/WritePlan";
-import { WriteReport } from "./pages/WriteReport";
-import { EditUserInfo } from "./pages/EditUserInfo";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Mypage } from './pages/Mypage';
+import { UserSearchPage } from './pages/UserSearchPage';
+import { CheckPostPage } from './pages/CheckPostPage';
+import { MainPage } from './pages/MainPage';
+import { HeadHuntingPage } from './pages/HeadHuntingPage';
+import { Signup } from './pages/Signup';
+import { ProjectForm } from './pages/ProjectFormPage';
+import { WritePostPage } from './pages/WritePostPage';
+import { LoginPage } from './pages/LoginPage';
+import { ViewPeoplePage } from './pages/ViewPeoplePage';
+import { WritePlan } from './pages/WritePlan';
+import { WriteReport } from './pages/WriteReport';
+import { EditUserInfo } from './pages/EditUserInfo';
 
 // import { Mypage_me } from './pages/Mypage_me';
 

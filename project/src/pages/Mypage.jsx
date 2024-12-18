@@ -7,8 +7,10 @@ import { Link } from '../components/mypage/Link';
 import { Project } from '../components/mypage/Project';
 import { Header } from '../components/Header';
 import { Button } from '../components/button/Button';
+import { useState } from 'react';
 
 export const Mypage = () => {
+  const [isEdit, setIsEdit] = useState(false);
   return (
     <>
       <MypageContainer>
@@ -16,7 +18,10 @@ export const Mypage = () => {
         <MypageContents>
           <ProfileContainer>
             <EditContainer>
-              <Button children={true ? '수정' : '프로젝트 제의'} />
+              <Button
+                isEdit={true}
+                children={true ? '수정' : '프로젝트 제의'}
+              />
             </EditContainer>
             <ProfileAll>
               <img src={profile} alt="프로필 이미지" />
@@ -109,11 +114,21 @@ export const Mypage = () => {
               )}
             </ProjectContainer>
           </DescriptionContainer>
+          {true && <LogoutBtn>로그아웃</LogoutBtn>}
         </MypageContents>
       </MypageContainer>
     </>
   );
 };
+const LogoutBtn = styled.button`
+  font-size: 20px;
+  font-weight: 600;
+  color: ${theme.color.gray[5]};
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+`;
 
 const GradeTitle = styled.div`
   font-size: 24px;
@@ -214,6 +229,7 @@ const MypageContainer = styled.div`
   align-items: center;
   gap: 20px;
   width: 100vw;
+  margin-bottom: 84px;
 `;
 
 const ProfileContainer = styled.div`
