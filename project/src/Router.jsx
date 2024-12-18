@@ -24,7 +24,7 @@ export const Router = () => {
         <Route path="/mypage" element={<Mypage />} />
         <Route path="/usersearch" element={<UserSearchPage />} />
         <Route path="/check" element={<CheckPostPage />} />
-        <Route path="/HeadHuntingPage" element={<HeadHuntingPage />} />
+        <Route path="/headhunting" element={<HeadHuntingPage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/plan" element={<ProjectForm />} />
         <Route path="/writepost" element={<WritePostPage />} />

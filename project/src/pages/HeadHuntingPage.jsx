@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { HeadHuntingModal } from "../components/headHunting/HeadHuntingModal";
+import styled from 'styled-components';
+import { HeadHuntingModal } from '../components/headHunting/HeadHuntingModal';
 
 export const HeadHuntingPage = () => {
   return (
