@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { SelectBtn } from "./../button/SelectBtn";
-import { theme } from "../../style/theme";
-import Arrow from "../../assets/selectArrow.svg";
+import styled from 'styled-components';
+import { SelectBtn } from './../button/SelectBtn';
+import { theme } from '../../style/theme';
+import Arrow from '../../assets/selectArrow.svg';
 
 export const HeadHuntingModal = () => {
   return (
@@ -42,6 +42,7 @@ const Contents = styled.div`
 
 const TitleContainer = styled.div`
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 20px;
 `;
