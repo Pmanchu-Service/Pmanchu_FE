@@ -73,6 +73,6 @@ const ModalContainer = styled.div`
   align-items: center;
   background-color: white;
   border-radius: 10px;
-  padding: 52px 0 0 0;
+  padding-top: 52px;
   gap: 46px;
 `;
