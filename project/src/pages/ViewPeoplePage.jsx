@@ -89,6 +89,9 @@ const TitleContainer = styled.header`
 
 const Line = styled.hr`
   width: 1024px;
+  @media (max-width: 1024px) {
+    width: 900px;
+  }
   height: 1px;
   border: none;
   background-color: ${theme.color.gray[2]};
