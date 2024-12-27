@@ -14,11 +14,13 @@ export const MainPage = () => {
             <Lanking>1위</Lanking>
             <Title>프로젝트에서 만남을 추구하면 안되는걸까</Title>
           </LankBox>
-          <Selection>
-            <CategoryBtn/>
-            인기프로젝트
-            <BottomArrow/>
-          </Selection>
+          <Box>
+            <Selection>
+              <CategoryBtn/>
+              인기프로젝트
+              <BottomArrow/>
+            </Selection>
+          </Box>
           <ProjectsBox>
             <Project/>
             <Project/>
@@ -36,7 +38,13 @@ export const MainPage = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 56px;
+  width: 1140px;
+
+  @media only screen and (max-width: 1140) {
+    width: 100vw;
+  }
 `
 
 const LankBox = styled.div`
@@ -49,6 +57,9 @@ box-sizing: border-box;
 align-items: center;
 padding-left: 36px;
 gap: 40px;
+@media only screen and (max-width: 1140px) {
+  width: 95vw;
+}
 `
 
 const Lanking = styled.p`
@@ -85,10 +96,17 @@ gap: 4px;
 const ProjectsBox = styled.div`
 width: 1140px;
 display: flex;
+justify-content: center;
 flex-wrap: wrap;
 row-gap: 56px;
 column-gap: 60px;
 box-sizing: border-box;
+
+@media only screen and (max-width: 1140px) {
+  width: 100vw;
+  row-gap: 34px;
+  column-gap: 42px;
+}
 `
 
 const Main = styled.div`
@@ -98,8 +116,19 @@ display: flex;
 padding-top: 84px;
 justify-content: center;
 box-sizing: border-box;
+
 `
 
 const ContentsBox = styled.div`
   
+`
+
+const Box = styled.div`
+  width: 1140px;
+  display: flex;
+  justify-content: flex-start;
+  @media only screen and (max-width: 1140px) {
+    width: 100vw;
+    padding-left: 30px;
+  }
 `

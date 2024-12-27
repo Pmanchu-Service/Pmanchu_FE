@@ -27,17 +27,22 @@ export const Project = () => {
 const Container = styled.div`
 width: 340px;
 height: 272px;
+background-color: #000;
+
+@media only screen and (max-width: 1140px) {
+  width: 30vw;
+}
 `
 
 const ProjectImgCover = styled.div`
-width: 340px;
+width: 100%;
 height: 220px;
 background: #AAAAAA;
 border-radius: 5px;
 `
 
 const Group = styled.div`
-width: 340px;
+width: 100%;
 height: 52px;
 display: flex;
 justify-content: space-between;
