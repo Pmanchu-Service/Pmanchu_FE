@@ -35,7 +35,6 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
   gap: 40px;
   padding-bottom: 160px;
 `;

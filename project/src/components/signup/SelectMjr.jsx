@@ -25,6 +25,9 @@ export const SelectMjr = () => {
             <Checkbox text="정보보안" />
             <Checkbox text="AI" />
           </A>
+          <A>
+            <Checkbox text="Game" />
+          </A>
         </StyledDiv>
       </Container>
     </>
@@ -37,10 +40,8 @@ const A = styled.div`
   gap: 16px;
 `;
 const StyledDiv = styled.div`
-  width: 400px;
-  height: 204px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   gap: 180px;
 `;
 const StyledImg = styled.img`
