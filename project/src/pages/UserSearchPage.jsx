@@ -79,6 +79,11 @@ export const UserSearchPage = () => {
                 onClick={() => tagClick(9)}
                 tagColor={tagColor[9]}
               />
+              <SpecialtyBtn
+                text={'Game'}
+                onClick={() => tagClick(10)}
+                tagColor={tagColor[10]}
+              />
             </MajorTagContainer>
             <Line />
           </MajorContainer>
